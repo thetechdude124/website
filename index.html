@@ -17,10 +17,10 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.5;
-            color: #1a1a1a;
-            background-color: #ffffff;
+            font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.55;
+            color: #111111;
+            background: linear-gradient(180deg, #ffffff 0%, #fcfcfc 100%);
             padding-top: 50px;
             font-size: 15px;
         }
@@ -31,41 +31,48 @@
             top: 0;
             left: 0;
             right: 0;
-            background-color: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid #e5e5e5;
+            background-color: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(6px);
+            border-bottom: 1px solid #e6e6e6;
             z-index: 1000;
-            padding: 10px 0;
+            padding: 8px 0;
         }
         
         .nav-container {
-            max-width: 1200px;
+            max-width: 940px;
             margin: 0 auto;
-            padding: 0 30px;
+            padding: 0 24px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         
         .nav-logo {
-            font-size: 1.1em;
-            font-weight: 600;
-            color: #1a1a1a;
+            font-size: 1.05em;
+            font-weight: 700;
+            color: #111111;
             text-decoration: none;
+            letter-spacing: 0.02em;
+            line-height: 1;
         }
         
         .nav-links {
             display: flex;
-            gap: 25px;
+            gap: 14px;
             list-style: none;
+            align-items: center;
         }
         
         .nav-links a {
-            color: #666;
+            color: #222222;
             text-decoration: none;
-            font-size: 0.9em;
+            font-size: 0.86em;
             transition: color 0.2s;
-            font-weight: 400;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+            line-height: 1;
+            display: inline-block;
+            padding: 2px 0;
         }
         
         .nav-links a:hover {
@@ -74,39 +81,48 @@
         
         /* Main Content */
         .main-content {
-            max-width: 1200px;
+            max-width: 940px;
             margin: 0 auto;
-            padding: 40px 30px;
+            padding: 18px 24px 32px;
         }
         
         /* Header Section */
         .header {
             display: flex;
             align-items: center;
-            gap: 30px;
-            margin-bottom: 10px;
-            padding-bottom: 25px;
-            border-bottom: none;
+            justify-content: space-between;
+            gap: 18px;
+            margin-bottom: 14px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #e9e9e9;
+        }
+
+        .header-content {
+            min-width: 0;
+            flex: 1;
         }
         
         .profile-picture {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
+            width: 138px;
+            height: 138px;
+            border-radius: 10px;
             object-fit: cover;
-            border: 1px solid #e5e5e5;
+            border: 1px solid #111111;
+            flex-shrink: 0;
+            justify-self: end;
         }
         
         .header-content h1 {
-            font-size: 2.2em;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: #1a1a1a;
-            line-height: 1.2;
+            font-size: 2.35em;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: #111111;
+            line-height: 1.12;
+            letter-spacing: -0.02em;
         }
         
         .contact {
-            color: #666;
+            color: #333333;
             font-size: 0.9em;
             line-height: 1.6;
         }
@@ -123,15 +139,39 @@
         /* Sections */
         .section {
             margin-bottom: 40px;
+            background: transparent;
+            border: none;
+            border-radius: 0;
+            padding: 0;
         }
-        
+
+        .section-intro {
+            color: #333333;
+            margin-bottom: 14px;
+            font-size: 0.95em;
+            max-width: 760px;
+        }
+
         h2 {
-            font-size: 1.5em;
+            font-size: 1.04em;
             font-weight: 600;
-            margin-bottom: 20px;
-            color: #1a1a1a;
-            padding-bottom: 8px;
-            border-bottom: 1px solid #e5e5e5;
+            margin-bottom: 14px;
+            color: #111111;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #dddddd;
+            letter-spacing: 0.07em;
+            text-transform: uppercase;
+            position: relative;
+        }
+
+        h2::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            width: 54px;
+            height: 2px;
+            background: #c41e3a;
         }
         
         h3 {
@@ -139,12 +179,12 @@
             font-weight: 600;
             margin-top: 20px;
             margin-bottom: 8px;
-            color: #1a1a1a;
+            color: #111111;
         }
         
         p {
             margin-bottom: 8px;
-            color: #444;
+            color: #222222;
             line-height: 1.6;
         }
         
@@ -164,13 +204,19 @@
         
         li {
             margin-bottom: 6px;
-            color: #444;
+            color: #222222;
             line-height: 1.6;
         }
         
         /* Experience Items */
         .experience-item, .project-item, .award-item {
             margin-bottom: 20px;
+        }
+
+        .experience-item {
+            border-left: 2px solid #e5e5e5;
+            padding-left: 14px;
+            margin-bottom: 24px;
         }
         
         .experience-header, .project-header {
@@ -183,7 +229,7 @@
         
         .title {
             font-weight: 600;
-            color: #1a1a1a;
+            color: #111111;
             font-size: 1.05em;
         }
         
@@ -194,13 +240,13 @@
         }
         
         .date {
-            color: #888;
+            color: #666666;
             font-size: 0.85em;
             white-space: nowrap;
         }
         
         .location {
-            color: #666;
+            color: #333333;
             font-size: 0.85em;
             font-style: italic;
             margin-bottom: 6px;
@@ -208,7 +254,7 @@
         
         .description {
             margin-top: 6px;
-            color: #444;
+            color: #222222;
         }
         
         .description ul {
@@ -217,62 +263,69 @@
         
         /* Projects Section with Sidebar */
         .projects-container {
-            display: grid;
-            grid-template-columns: 1fr 280px;
-            gap: 40px;
+            display: block;
             margin-top: 20px;
         }
         
         /* Projects Grid */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
         }
         
         .project-card {
             background: #fff;
             border: 1px solid #e5e5e5;
-            border-radius: 4px;
+            border-radius: 8px;
             overflow: hidden;
-            transition: transform 0.2s, border-color 0.2s;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
         
         .project-card:hover {
-            transform: translateY(-2px);
             border-color: #c41e3a;
+            box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08);
         }
         
         .project-card-image {
             width: 100%;
-            height: 180px;
+            height: 170px;
             object-fit: cover;
             display: block;
+            border-bottom: 1px solid #eeeeee;
         }
         
         .project-card-content {
-            padding: 15px;
+            padding: 12px 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            flex: 1;
         }
         
         .project-card-title {
             font-weight: 600;
-            color: #1a1a1a;
+            color: #111111;
             font-size: 1em;
             margin-bottom: 6px;
             line-height: 1.3;
         }
         
         .project-card-date {
-            color: #888;
+            color: #666666;
             font-size: 0.8em;
             margin-bottom: 8px;
         }
         
         .project-card-description {
-            color: #666;
-            font-size: 0.85em;
+            color: #333333;
+            font-size: 0.9em;
             margin-bottom: 10px;
             line-height: 1.4;
+            flex: 1;
         }
         
         .project-card-links {
@@ -289,84 +342,25 @@
         /* TITANS Project - Special Layout */
         .project-titans {
             grid-column: 1 / -1;
-            border: 1px solid #e5e5e5;
-            border-radius: 4px;
-            padding: 20px;
+            border: 1px solid #e8c4cb;
+            border-radius: 8px;
+            padding: 16px;
             margin-bottom: 0;
+            background: #ffffff;
         }
         
         .project-titans-title {
             font-weight: 600;
-            color: #1a1a1a;
+            color: #111111;
             font-size: 1.1em;
             margin-bottom: 8px;
         }
         
         .project-titans-description {
-            color: #666;
+            color: #222222;
             font-size: 0.9em;
             margin-bottom: 10px;
             line-height: 1.5;
-        }
-        
-        /* GitHub Sidebar */
-        .github-sidebar {
-            background: #fafafa;
-            border: 1px solid #e5e5e5;
-            border-radius: 4px;
-            padding: 20px;
-            height: fit-content;
-            position: sticky;
-            top: 70px;
-        }
-        
-        .github-sidebar h3 {
-            font-size: 1.1em;
-            margin-top: 0;
-            margin-bottom: 15px;
-            color: #1a1a1a;
-        }
-        
-        .github-repo {
-            padding: 12px 0;
-            border-bottom: 1px solid #e5e5e5;
-        }
-        
-        .github-repo:last-child {
-            border-bottom: none;
-        }
-        
-        .github-repo-name {
-            font-weight: 600;
-            color: #1a1a1a;
-            font-size: 0.9em;
-            margin-bottom: 4px;
-        }
-        
-        .github-repo-name a {
-            color: #c41e3a;
-        }
-        
-        .github-repo-description {
-            color: #666;
-            font-size: 0.8em;
-            line-height: 1.4;
-            margin-bottom: 6px;
-        }
-        
-        .github-repo-meta {
-            color: #888;
-            font-size: 0.75em;
-        }
-        
-        .github-view-all {
-            margin-top: 15px;
-            text-align: center;
-        }
-        
-        .github-view-all a {
-            color: #c41e3a;
-            font-size: 0.85em;
         }
         
         /* Publications */
@@ -382,7 +376,7 @@
         
         .publication-title {
             font-weight: 600;
-            color: #1a1a1a;
+            color: #111111;
             margin-bottom: 4px;
             font-size: 1em;
         }
@@ -390,9 +384,9 @@
         /* Book Section */
         .book-item {
             margin: 20px 0;
-            padding: 15px;
-            background: #fafafa;
-            border-radius: 4px;
+            padding: 12px 14px;
+            background: #ffffff;
+            border-radius: 8px;
             border-left: 3px solid #c41e3a;
         }
         
@@ -456,26 +450,27 @@
             font-weight: 600;
         }
         
-        /* Awards - Compact */
+        /* Awards */
         .award-item {
             margin-bottom: 12px;
             padding-bottom: 12px;
             border-bottom: 1px solid #f0f0f0;
         }
-        
+
         .award-item:last-child {
             border-bottom: none;
         }
         
         .award-title {
             font-weight: 600;
-            color: #1a1a1a;
-            margin-bottom: 4px;
+            color: #111111;
+            margin-bottom: 6px;
         }
         
         .award-description {
-            color: #666;
+            color: #333333;
             font-size: 0.9em;
+            line-height: 1.5;
         }
         
         /* News Section */
@@ -491,13 +486,13 @@
         
         .news-title {
             font-weight: 600;
-            color: #1a1a1a;
+            color: #111111;
             margin-bottom: 4px;
             font-size: 1em;
         }
         
         .news-title a {
-            color: #1a1a1a;
+            color: #111111;
         }
         
         .news-title a:hover {
@@ -505,7 +500,7 @@
         }
         
         .news-source {
-            color: #888;
+            color: #666666;
             font-size: 0.85em;
             font-style: italic;
         }
@@ -515,16 +510,21 @@
             .main-content {
                 padding: 30px 20px;
             }
-            
+
             .header {
                 flex-direction: column;
                 text-align: center;
                 gap: 20px;
             }
+
+            .header-content {
+                flex: initial;
+            }
             
             .profile-picture {
-                width: 80px;
-                height: 80px;
+                width: 96px;
+                height: 96px;
+                justify-self: center;
             }
             
             .header-content h1 {
@@ -532,7 +532,7 @@
             }
             
             .nav-links {
-                gap: 15px;
+                gap: 12px;
                 font-size: 0.85em;
             }
             
@@ -552,14 +552,6 @@
                 grid-template-columns: 1fr;
             }
             
-            .projects-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .github-sidebar {
-                position: relative;
-                top: 0;
-            }
         }
     </style>
 </head>
@@ -570,14 +562,11 @@
             <a href="#home" class="nav-logo">Aditya Dewan</a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#news">News</a></li>
                 <li><a href="#education">Education</a></li>
-                <li><a href="#experience">Experience</a></li>
+                <li><a href="#coursework">Coursework</a></li>
+                <li><a href="#experience">Research & Experience</a></li>
                 <li><a href="#awards">Awards</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#talks">Talks</a></li>
-                <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -586,7 +575,7 @@
     <div class="main-content">
         <!-- Header -->
         <div class="header" id="home">
-            <img src="assets/img/IMG_0197.jpg" alt="Aditya Dewan" class="profile-picture">
+            <img src="assets/img/profile-2026.png" alt="Aditya Dewan" class="profile-picture">
             <div class="header-content">
                 <h1>Aditya Dewan</h1>
                 <div class="contact">
@@ -601,7 +590,7 @@
         <!-- About -->
         <div class="section" id="about">
             <h2>About</h2>
-            <p>Aspiring deep learning researcher working towards mastery in the field. Interested in alternative transformer architectures, statistical analysis of financial markets in quantitative trading, and loss-landscape-based knowledge distillation.</p>
+            <p>Quantitative finance and machine learning researcher focused on statistical modeling of financial markets, efficient transformer architectures, and loss-landscape-based knowledge distillation. Aspiring deep learning researcher working towards mastery in the field.</p>
         </div>
 
         <!-- Education -->
@@ -610,23 +599,66 @@
             <div class="experience-item">
                 <div class="experience-header">
                     <div>
-                        <span class="title">B.S. Computer Science, Machine Learning Concentration</span>
+                        <span class="title">B.S. Computer Science, Mathematics Minor, Machine Learning Concentration</span>
                         <span class="organization">Carnegie Mellon University</span>
                     </div>
-                    <span class="date">May 2027</span>
+                    <span class="date">May 2028</span>
                 </div>
                 <div class="location">Pittsburgh, PA</div>
                 <div class="description">
-                    <p><strong>Courses:</strong> Deep Learning (Ph.D.), Discrete Math, Computer Systems, Functional Programming, Math Finance</p>
-                    <p><strong>Clubs:</strong> Carnegie Mellon Racing (Built SVMs from scratch, 2x speedup for GPU midline generation), Quant Club (Goldman Sachs Quantathon)</p>
-                    <p>Built Malloc (Dynamic Memory Allocator) and Fully Concurrent, thread-safe file system in C from scratch</p>
+                    <p><strong>Clubs:</strong> Quant Club (Goldman Sachs Quantathon: 100%), CMU Racing (built CUDA SVMs with 2x speedup for GPU midline generation).</p>
+                    <p><strong>Systems Work:</strong> Built Malloc (dynamic memory allocator) and a fully concurrent, thread-safe file system in C from scratch.</p>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <span class="title">Gifted Program</span>
+                        <span class="organization">The Woodlands Secondary School</span>
+                    </div>
+                    <span class="date">Sep. 2020 – Jun. 2024</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Selected Coursework -->
+        <div class="section" id="coursework">
+            <h2>Selected Coursework</h2>
+            <div class="skills">
+                <div class="skill-category">
+                    <strong>Machine Learning & Systems:</strong>
+                    10-723 Generative AI (Ph.D.), 11-785 Deep Learning (Ph.D.), 10-701 Machine Learning (Ph.D.), 15-442 Machine Learning Systems (GPU + Kernel Optimization), 15-210 Parallel Computing + Algorithms, 15-213 Introduction to Computer Systems, 15-122 Data Structures and Algorithms, 15-150 Functional Programming
+                </div>
+                <div class="skill-category">
+                    <strong>Math, Theory & Quantitative:</strong>
+                    21-301 Combinatorics, 15-259 Probability and Computing, 21-270 Mathematical Finance, 15-251 Theoretical Computer Science/Discrete Math, 15-195 Competitive Programming, 21-241 Matrices and Linear Algebra, 21-295 Putnam Seminar
                 </div>
             </div>
         </div>
 
         <!-- Experience -->
         <div class="section" id="experience">
-            <h2>Experience</h2>
+            <h2>Research & Experience</h2>
+            <p class="section-intro">Research-heavy ML work and production systems engineering across long-context modeling, diagnostics, and high-reliability infrastructure.</p>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <span class="title">Software Development Engineer Intern</span>
+                        <span class="organization">Amazon Web Services (AWS), Amazon DCV Team</span>
+                    </div>
+                    <span class="date">May 2026 – Aug. 2026</span>
+                </div>
+                <div class="location">Seattle, WA</div>
+                <div class="description">
+                    <ul>
+                        <li>Designed a Poisson-process packet-loss probe scheduler with provable guarantees, modeling inter-arrivals and anomaly recurrences to achieve at least 95% detection within seven recurrences; bounded heavy-tail wait behavior via Chernoff-bound analysis and Lambert W-based calibration.</li>
+                        <li>Built a real-time C#/.NET diagnostics client (STA/MTA multithreading, async probes, rotating ndjson sessions) streaming 51 live metrics with embedded Gaussian fitting, pairwise correlation heatmaps, scatter/histograms, and session replay; reduced production troubleshooting time by roughly 50% for clients including Netflix, the U.S. Army, and Volkswagen.</li>
+                        <li>Architected an end-to-end time-series ML pipeline that injects CPU/GPU/RTT faults, dynamically labels causal signals, and fine-tunes a Tiny Time Mixer with custom anomaly-detection and forecasting heads; implemented root-cause routing for targeted remediation.</li>
+                    </ul>
+                </div>
+            </div>
             
             <div class="experience-item">
                 <div class="experience-header">
@@ -639,8 +671,8 @@
                 <div class="location">Pittsburgh, PA</div>
                 <div class="description">
                     <ul>
-                        <li>Implemented novel skip-connection-based Mamba model to remove multi-head-attention-based retrieval performance decline in SSM architectures</li>
-                        <li>Analyzed State Space Models and Mamba-2 bottlenecks on knowledge retrieval benchmarks (MMLU)</li>
+                        <li>Implemented a novel skip-connection-based Mamba model to mitigate multi-head-attention-related retrieval decline in SSM architectures for linear-time LLM settings.</li>
+                        <li>Analyzed State Space Models and Mamba-2 gather-and-aggregate bottlenecks on MMLU retrieval benchmarks, including embedding perturbation/projection behavior.</li>
                     </ul>
                 </div>
             </div>
@@ -649,15 +681,15 @@
                 <div class="experience-header">
                     <div>
                         <span class="title">Machine Learning Research Intern</span>
-                        <span class="organization">CMU — Dr. David Touretzky</span>
+                        <span class="organization">CMU, Dr. David Touretzky</span>
                     </div>
                     <span class="date">Jul. 2023 – Aug. 2024</span>
                 </div>
                 <div class="location">Pittsburgh, PA</div>
                 <div class="description">
                     <ul>
-                        <li>Engineered React web-app to simulate textual Markov Chain models for 900+ professionals; used in Concord University study (<a href="https://www.cs.cmu.edu/~dst/MarkovChainDemo" target="_blank">demo</a>)</li>
-                        <li>Designed efficient algorithm for automated graph generation and n-gram estimation for low latency on large text datasets</li>
+                        <li>Engineered and deployed a React web application for simulating and visualizing textual Markov Chain models for 900+ professionals; used in a Concord University study (<a href="https://www.cs.cmu.edu/~dst/MarkovChainDemo" target="_blank">demo</a>).</li>
+                        <li>Built efficient graph generation and probabilistic next-word computation pipelines for bigram, trigram, and tetragram models with dynamic rendering/caching for low latency on large corpora.</li>
                     </ul>
                 </div>
             </div>
@@ -673,8 +705,8 @@
                 <div class="location">Dallas, TX</div>
                 <div class="description">
                     <ul>
-                        <li>Devised novel compression algorithm yielding 2-24% more accuracy in 10% training time; awarded by NSA, ISEF, WAICY</li>
-                        <li>Leveraged high-descent-potential saddle points via Hessian approximation; tested on MLPs, CNNs, ResNets</li>
+                        <li>Devised a loss-landscape distillation compression method (SPRKD) yielding 2-24% higher accuracy at roughly 10% of conventional training time in tested configurations.</li>
+                        <li>Computed high-descent-potential saddle points in the teacher optimization landscape via Hessian approximation and spectral analysis for rapid curvature-tracking student convergence.</li>
                         <li>Project: <a href="http://tinyurl.com/AdityaSPRKD" target="_blank">SPRKD</a></li>
                     </ul>
                 </div>
@@ -688,10 +720,11 @@
                     </div>
                     <span class="date">Jul. 2023 – Jan. 2024</span>
                 </div>
+                <div class="location">Toronto, CA</div>
                 <div class="description">
                     <ul>
-                        <li>Architected first ML infrastructure for min latency and high server volume; devised novel drug vector embeddings</li>
-                        <li>Deployed few-shot LLM drug monograph summarization API and React app for in-clinic patient diagnosis</li>
+                        <li>Engineered the company’s first ML backend infrastructure for high server volume and minimum latency using prompt chunking, custom drug vector embeddings, and safety guardrails.</li>
+                        <li>Developed an LLM-based drug monograph summarization API and web application for real-time clinical patient diagnosis workflows.</li>
                     </ul>
                 </div>
             </div>
@@ -704,10 +737,11 @@
                     </div>
                     <span class="date">Jul. 2021 – May. 2023</span>
                 </div>
+                <div class="location">Toronto, CA</div>
                 <div class="description">
                     <ul>
-                        <li>Led team of 3; developed + deployed recommendation engine API to 45k clients</li>
-                        <li>Engineered hybrid GAN, Gradient Boosted Tree, MLP architectures for production</li>
+                        <li>Led a team of three to architect and deploy a recommendation engine API serving 45,000+ clients in prototyping, targeting maximal average rating-change uplift.</li>
+                        <li>Built a hybrid GAN/Gradient Boosted Tree/MLP model pipeline and production deployment stack with Python, PyTorch, TensorFlow, XGBoost, SQL, and Flask.</li>
                     </ul>
                 </div>
             </div>
@@ -716,63 +750,58 @@
         <!-- Honors and Awards -->
         <div class="section" id="awards">
             <h2>Honors and Awards</h2>
-            
+            <p class="section-intro">Selected recognitions across quantitative trading, machine learning research, and international science competitions.</p>
             <div class="award-item">
-                <div class="award-title">Optiver Market Making Competition Winner</div>
-                <div class="award-description">First Place in Quantitative Trading, first freshman team to win</div>
+                <div class="award-title">Optiver Market Making Competition</div>
+                <div class="award-description">1st Place in Quantitative Trading; first freshman team to ever win.</div>
             </div>
 
             <div class="award-item">
-                <div class="award-title">Hudson River Trading: Best Use of Quantitative Data Award</div>
-                <div class="award-description">For machine learning insurance predictor platform</div>
+                <div class="award-title">Hudson River Trading, Best Use of Quantitative Data Award</div>
+                <div class="award-description">Awarded for a machine-learning insurance-pricing platform.</div>
             </div>
 
             <div class="award-item">
-                <div class="award-title">U.S. NSA: Second Award in Cybersecurity/Mathematics Research</div>
-                <div class="award-description">At Regeneron ISEF (1600+) for neural network compression research (SPRKD)</div>
+                <div class="award-title">U.S. National Security Agency (NSA)</div>
+                <div class="award-description">Second Award in Cybersecurity/Mathematics at Regeneron ISEF (1600+ finalists) for neural network compression research.</div>
             </div>
 
             <div class="award-item">
-                <div class="award-title">Regeneron ISEF: Team Canada-ISEF Selectee</div>
-                <div class="award-description">1 of 8 selected to represent Canada; Fourth Award in Robotics and Intelligent Machines</div>
+                <div class="award-title">Regeneron ISEF</div>
+                <div class="award-description">One of 8 selected to represent Canada; Fourth Award in Robotics and Intelligent Machines.</div>
+            </div>
+
+            <div class="award-item">
+                <div class="award-title">Google DeepMind Offer</div>
+                <div class="award-description">Selected as a research contractor as a sophomore (declined due to start date conflict).</div>
             </div>
 
             <div class="award-item">
                 <div class="award-title">TEDx Speaker, Innovire Speaker</div>
-                <div class="award-description">Mathematical Foundations of ML, AI Research (<a href="https://linktr.ee/AdiCMU" target="_blank">linktr.ee/AdiCMU</a>)</div>
+                <div class="award-description">Mathematical Foundations of ML and AI research talks (<a href="https://linktr.ee/AdiCMU" target="_blank">linktr.ee/AdiCMU</a>).</div>
             </div>
 
             <div class="award-item">
-                <div class="award-title">Morgan Stanley/Quantbot Data Trading Competition</div>
-                <div class="award-description">Sixth Place for quant trading algo w/highest SHARPE</div>
-            </div>
-
-            <div class="award-item">
-                <div class="award-title">Outstanding Research Award, WAICY 2022</div>
-                <div class="award-description">For SPRKD - Saddle Point Reversion for Knowledge Distillation</div>
-            </div>
-
-            <div class="award-item">
-                <div class="award-title">3rd Place SciComm Viewpoint Challenge Winner, SCVC 2022</div>
-                <div class="award-description">For viewpoint paper on leveraging loss landscape properties to enhance knowledge distillation</div>
+                <div class="award-title">Morgan Stanley / Quantbot Trading Competition</div>
+                <div class="award-description">Highest Sharpe ratio across all submissions (6th overall).</div>
             </div>
         </div>
 
         <!-- Projects -->
         <div class="section" id="projects">
             <h2>Projects</h2>
+            <p class="section-intro">Selected technical projects spanning efficient attention, optimization, and applied ML systems.</p>
             
             <div class="projects-container">
                 <div class="projects-grid">
-                    <!-- TITANS Project - Full Width -->
+                    <!-- HFOLD Project - Full Width -->
                     <div class="project-titans">
-                        <div class="project-titans-title">Expected Gradient Divergence Weighting (EGDW) for Robust Memory Updates in TITANS</div>
+                        <div class="project-titans-title">HFOLD: Dynamic Hidden State Heap Folding for Efficient Long-Context Attention</div>
                         <div class="project-titans-description">
-                            Probabilistic update method for TITANS neural memory module using Markov's inequality and Jensen's inequality. Achieved lower validation cross-entropy than baseline with higher train loss, indicating better generalization. Grade: 96%.
+                            Introduced an inference-time memory mechanism that augments sliding-window attention with a bounded heap of high-relevance historical states. At each timestep, HFOLD retrieves top-ranked hidden states, reinserts transformed high-attention tokens, and applies a relevance-conditioned FOLD update (via GEM + RSM modules) to preserve information from evicted states. On Pythia 14M/31M evaluation, HFOLD recovered substantial long-range quality lost by plain sliding-window attention in language modeling (perplexity reduction from 225.1 to 91.7 in the full-attention-finetuned setting), while maintaining linear-time asymptotic behavior. The main current limitation is systems-level throughput overhead from non-fused heap operations.
                         </div>
                         <div class="project-card-links">
-                            <a href="https://tinyurl.com/IDLFinal" target="_blank">Paper</a> | 
-                            <a href="https://github.com/pranavr11/IDL_FINAL_PROJ" target="_blank">GitHub</a>
+                            <a href="https://drive.google.com/file/d/1XmTStuIUuc82CmCB6kFsNkOfhodPiYpv/view?usp=drive_link" target="_blank">Paper</a>
                         </div>
                     </div>
 
@@ -782,7 +811,7 @@
                         <div class="project-card-content">
                             <div class="project-card-title">SPRKD (Saddle Point Recruitment for Knowledge Distillation)</div>
                             <div class="project-card-date">2022-2024</div>
-                            <div class="project-card-description">Novel neural network compression algorithm yielding 2-24% more accuracy in 10% training time. Awarded by NSA, ISEF, WAICY.</div>
+                            <div class="project-card-description">Research-driven distillation/compression framework leveraging loss-landscape structure and saddle-point dynamics; improved accuracy by 2-24% with major training-efficiency gains, recognized by NSA, ISEF, and WAICY.</div>
                             <div class="project-card-links">
                                 <a href="http://tinyurl.com/AdityaSPRKD" target="_blank">Project</a> | 
                                 <a href="https://drive.google.com/file/d/1WzIgYpHcdyfayhP3GcqTrqPTt0Br43qf/view?usp=share_link" target="_blank">Presentation</a>
@@ -795,7 +824,7 @@
                         <img src="assets/img/PORTFOLIO ITEMS/PROJECTS/BANs.png" alt="Born-Again Neural Networks" class="project-card-image">
                         <div class="project-card-content">
                             <div class="project-card-title">Born-Again Neural Networks</div>
-                            <div class="project-card-description">Implementation of Born-Again Neural Networks from scratch.</div>
+                            <div class="project-card-description">From-scratch reproduction of Born-Again Neural Networks with controlled teacher-student experiments to analyze iterative self-distillation behavior.</div>
                             <div class="project-card-links">
                                 <a href="https://github.com/thetechdude124/Born-Again-NNs-From-Scratch" target="_blank">GitHub</a>
                             </div>
@@ -807,7 +836,7 @@
                         <img src="assets/img/PORTFOLIO ITEMS/PROJECTS/ADAM.png" alt="Adam Optimization" class="project-card-image">
                         <div class="project-card-content">
                             <div class="project-card-title">Adam Optimization From Scratch</div>
-                            <div class="project-card-description">Implementation of Adam optimizer from scratch.</div>
+                            <div class="project-card-description">Clean-room implementation of Adam with detailed instrumentation for convergence diagnostics and optimizer behavior analysis.</div>
                             <div class="project-card-links">
                                 <a href="https://github.com/thetechdude124/Adam-Optimization-From-Scratch" target="_blank">GitHub</a>
                             </div>
@@ -819,9 +848,22 @@
                         <img src="assets/img/PORTFOLIO ITEMS/PROJECTS/MAXOUT.png" alt="Maxout Activation" class="project-card-image">
                         <div class="project-card-content">
                             <div class="project-card-title">Custom Maxout Activation Implementation</div>
-                            <div class="project-card-description">Custom implementation of Maxout activation function.</div>
+                            <div class="project-card-description">Numerically stable Maxout implementation and experiments comparing representational behavior against conventional activation families.</div>
                             <div class="project-card-links">
                                 <a href="https://github.com/thetechdude124/Custom-Maxout-Activation-Implementation" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TITANS -->
+                    <div class="project-card">
+                        <div class="project-card-content">
+                            <div class="project-card-title">Expected Gradient Divergence Weighting (EGDW) for TITANS Memory Updates</div>
+                            <div class="project-card-date">2025</div>
+                            <div class="project-card-description">Proposed a probabilistic memory-update rule for TITANS using Markov/Jensen bounds to stabilize neural memory writes; achieved improved validation cross-entropy relative to baseline despite higher train loss, indicating stronger generalization.</div>
+                            <div class="project-card-links">
+                                <a href="https://tinyurl.com/IDLFinal" target="_blank">Paper</a> |
+                                <a href="https://github.com/pranavr11/IDL_FINAL_PROJ" target="_blank">GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -831,7 +873,7 @@
                         <img src="assets/img/PORTFOLIO ITEMS/PROJECTS/AUTONOMOUS VEHICLE SIMULATOR.png" alt="Autonomous Vehicle Simulator" class="project-card-image">
                         <div class="project-card-content">
                             <div class="project-card-title">Autonomous Vehicle Simulator</div>
-                            <div class="project-card-description">Autonomous vehicle simulator using behavioral cloning.</div>
+                            <div class="project-card-description">Behavioral-cloning based autonomous driving stack in simulation, including data collection, model training, and closed-loop trajectory validation.</div>
                             <div class="project-card-links">
                                 <a href="https://www.youtube.com/watch?v=HDSw95Cojp8" target="_blank">Video</a> | 
                                 <a href="https://github.com/thetechdude124/Autonomous-Vehicle-Simulator-Behavioural-Cloning" target="_blank">GitHub</a>
@@ -844,7 +886,7 @@
                         <img src="assets/img/PORTFOLIO ITEMS/PROJECTS/SYMPTOM DIAGNOSIS AI.png" alt="Symptom Diagnosis AI" class="project-card-image">
                         <div class="project-card-content">
                             <div class="project-card-title">Symptom Diagnosis AI</div>
-                            <div class="project-card-description">AI system for symptom diagnosis and medical assistance.</div>
+                            <div class="project-card-description">Clinical NLP assistant for symptom triage and patient-facing explanation generation, built as an end-to-end inference API with web integration.</div>
                             <div class="project-card-links">
                                 <a href="https://aditya-dewan124.medium.com/making-an-ai-that-can-diagnose-your-symptoms-483468833fcd" target="_blank">Article</a> | 
                                 <a href="https://github.com/thetechdude124/Symptom-Diagnosis-AI" target="_blank">GitHub</a>
@@ -857,7 +899,7 @@
                         <img src="assets/img/PORTFOLIO ITEMS/PROJECTS/CHESS AI.png" alt="Chess AI" class="project-card-image">
                         <div class="project-card-content">
                             <div class="project-card-title">Chess AI</div>
-                            <div class="project-card-description">Chess-playing AI bot implementation.</div>
+                            <div class="project-card-description">Chess engine prototype with search/evaluation pipeline and iterative model tuning to study strategic depth under constrained compute.</div>
                             <div class="project-card-links">
                                 <a href="https://aditya-dewan124.medium.com/how-i-made-and-got-beaten-by-a-chess-playing-bot-d805cf471bb5" target="_blank">Article</a> | 
                                 <a href="https://github.com/thetechdude124/ChessAI" target="_blank">GitHub</a>
@@ -870,7 +912,7 @@
                         <img src="assets/img/PORTFOLIO ITEMS/ARTICLES/CRYSTA INSIGHTS.png" alt="Crysta" class="project-card-image">
                         <div class="project-card-content">
                             <div class="project-card-title">Crysta</div>
-                            <div class="project-card-description">All-in-one productivity platform for students based on non-invasive energy level tracking.</div>
+                            <div class="project-card-description">Student productivity platform MVP centered on non-invasive energy-state estimation, experimentation design, and behavior-adaptive scheduling.</div>
                             <div class="project-card-links">
                                 <a href="https://github.com/thetechdude124/Crysta-MVP" target="_blank">GitHub</a> | 
                                 <a href="https://blog.startupstash.com/my-first-company-failed-heres-what-i-learned-and-what-you-should-avoid-5174ee78481a" target="_blank">Article</a>
@@ -879,63 +921,6 @@
                     </div>
                 </div>
 
-                <!-- GitHub Sidebar -->
-                <div class="github-sidebar">
-                    <h3>GitHub Repositories</h3>
-                    
-                    <div class="github-repo">
-                        <div class="github-repo-name">
-                            <a href="https://github.com/thetechdude124/Born-Again-NNs-From-Scratch" target="_blank">Born-Again-NNs</a>
-                        </div>
-                        <div class="github-repo-description">Born-Again Neural Networks implementation</div>
-                    </div>
-
-                    <div class="github-repo">
-                        <div class="github-repo-name">
-                            <a href="https://github.com/thetechdude124/Adam-Optimization-From-Scratch" target="_blank">Adam-Optimization</a>
-                        </div>
-                        <div class="github-repo-description">Adam optimizer from scratch</div>
-                    </div>
-
-                    <div class="github-repo">
-                        <div class="github-repo-name">
-                            <a href="https://github.com/thetechdude124/Custom-Maxout-Activation-Implementation" target="_blank">Maxout-Activation</a>
-                        </div>
-                        <div class="github-repo-description">Custom Maxout activation</div>
-                    </div>
-
-                    <div class="github-repo">
-                        <div class="github-repo-name">
-                            <a href="https://github.com/thetechdude124/Autonomous-Vehicle-Simulator-Behavioural-Cloning" target="_blank">Autonomous-Vehicle</a>
-                        </div>
-                        <div class="github-repo-description">Behavioral cloning simulator</div>
-                    </div>
-
-                    <div class="github-repo">
-                        <div class="github-repo-name">
-                            <a href="https://github.com/thetechdude124/Symptom-Diagnosis-AI" target="_blank">Symptom-Diagnosis-AI</a>
-                        </div>
-                        <div class="github-repo-description">AI medical diagnosis system</div>
-                    </div>
-
-                    <div class="github-repo">
-                        <div class="github-repo-name">
-                            <a href="https://github.com/thetechdude124/ChessAI" target="_blank">ChessAI</a>
-                        </div>
-                        <div class="github-repo-description">Chess-playing AI bot</div>
-                    </div>
-
-                    <div class="github-repo">
-                        <div class="github-repo-name">
-                            <a href="https://github.com/thetechdude124/Crysta-MVP" target="_blank">Crysta-MVP</a>
-                        </div>
-                        <div class="github-repo-description">Productivity platform</div>
-                    </div>
-
-                    <div class="github-view-all">
-                        <a href="https://github.com/thetechdude124" target="_blank">View All Repositories →</a>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -944,8 +929,8 @@
             <h2>Publications & Articles</h2>
             
             <div class="book-item">
-                <h3>Education for the Next Generation: Nurturing Effective Learning</h3>
-                <p style="margin-bottom: 8px;">Published on Amazon, exploring modern approaches to education and effective learning strategies.</p>
+                <h3>AI Education Textbook: Education for the Next Generation: Nurturing Effective Learning</h3>
+                <p style="margin-bottom: 8px;">Published on Amazon; peaked at #4 in Neural Networks.</p>
                 <div class="project-links">
                     <a href="https://www.amazon.com/Education-Next-Generation-Nurturing-Effective-ebook/dp/B0D8JHX3GS" target="_blank">Amazon</a>
                 </div>
@@ -963,34 +948,6 @@
                 <div class="description">
                     <a href="https://medium.com/@aditya-dewan124/atherma-solving-the-energy-crisis-with-nuclear-607cd5b3c0b6" target="_blank">Medium Article</a> | 
                     <a href="https://www.youtube.com/watch?v=gU6ubmz6Bwk&t=517s" target="_blank">TKS Moonshot Pitch</a>
-                </div>
-            </div>
-
-            <div class="publication-item">
-                <div class="publication-title">The Greatest Threat to Human Survival is Us</div>
-                <div class="description">
-                    <a href="https://aditya-dewan124.medium.com/the-greatest-threat-to-human-survival-is-us-6bf3242a9cc" target="_blank">Medium Article</a>
-                </div>
-            </div>
-
-            <div class="publication-item">
-                <div class="publication-title">Why You Aren't Achieving Your Goals</div>
-                <div class="description">
-                    <a href="https://aditya-dewan124.medium.com/why-you-arent-achieving-your-goals-94326f4d5cb7" target="_blank">Medium Article</a>
-                </div>
-            </div>
-
-            <div class="publication-item">
-                <div class="publication-title">Robots Care More About the Environment Than We Do</div>
-                <div class="description">
-                    <a href="https://aditya-dewan124.medium.com/robots-care-more-about-the-environment-than-we-do-2592c22fc736" target="_blank">Medium Article</a>
-                </div>
-            </div>
-
-            <div class="publication-item">
-                <div class="publication-title">Prime Editing: The Future of Gene Editing</div>
-                <div class="description">
-                    <a href="https://aditya-dewan124.medium.com/prime-editing-the-future-of-gene-editing-c472b257c436" target="_blank">Medium Article</a>
                 </div>
             </div>
         </div>
@@ -1039,10 +996,10 @@
             <h2>Skills</h2>
             <div class="skills">
                 <div class="skill-category">
-                    <strong>Languages:</strong> Python, C, C++, Java, SML, SQL, HTML, CSS, JavaScript
+                    <strong>Languages:</strong> Python, C, C++, C#, Java, SML, SQL, JavaScript
                 </div>
                 <div class="skill-category">
-                    <strong>Frameworks & Technologies:</strong> PyTorch, TensorFlow, Node.js, Flask, React.js, NumPy, Pandas, XGBoost, CUDA
+                    <strong>Frameworks & Technologies:</strong> PyTorch, TensorFlow, .NET, Node.js, Flask, React.js, NumPy, Pandas, XGBoost, CUDA, Git
                 </div>
             </div>
         </div>
@@ -1050,6 +1007,7 @@
         <!-- Contact -->
         <div class="section" id="contact">
             <h2>Contact</h2>
+            <p style="margin-bottom: 8px; color: #333333;">Pittsburgh, PA | (647) 408-6446 | <a href="mailto:adewan2@andrew.cmu.edu">adewan2@andrew.cmu.edu</a></p>
             <p>
                 <a href="mailto:adewan2@andrew.cmu.edu">Email</a> | 
                 <a href="https://www.linkedin.com/in/AdityaDew" target="_blank">LinkedIn</a> | 
