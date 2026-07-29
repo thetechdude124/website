@@ -339,8 +339,8 @@
             color: #c41e3a;
         }
         
-        /* TITANS Project - Special Layout */
-        .project-titans {
+        /* Full-Width Project Layout */
+        .project-fullwidth {
             grid-column: 1 / -1;
             border: 1px solid #e8c4cb;
             border-radius: 8px;
@@ -349,17 +349,81 @@
             background: #ffffff;
         }
         
-        .project-titans-title {
+        .project-fullwidth-title {
             font-weight: 600;
             color: #111111;
             font-size: 1.1em;
             margin-bottom: 8px;
         }
         
-        .project-titans-description {
+        .project-fullwidth-description {
             color: #222222;
             font-size: 0.9em;
             margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        /* Featured Project Banner */
+        .project-banner {
+            grid-column: 1 / -1;
+            border: 1px solid #e5e5e5;
+            border-left: 3px solid #c41e3a;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #ffffff;
+        }
+        
+        .project-banner-content {
+            padding: 16px 18px;
+        }
+        
+        .project-banner-figure {
+            margin: 0;
+            border-top: 1px solid #eeeeee;
+            background: #fbfbfb;
+            padding: 14px 18px 12px;
+        }
+        
+        .project-banner-figure img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        
+        .project-banner-figure figcaption {
+            margin-top: 8px;
+            color: #666666;
+            font-size: 0.78em;
+            line-height: 1.45;
+        }
+        
+        .project-banner-eyebrow {
+            font-size: 0.72em;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+            color: #c41e3a;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        
+        .project-banner-title {
+            font-weight: 600;
+            color: #111111;
+            font-size: 1.15em;
+            margin-bottom: 4px;
+            line-height: 1.3;
+        }
+        
+        .project-banner-meta {
+            color: #666666;
+            font-size: 0.8em;
+            margin-bottom: 10px;
+        }
+        
+        .project-banner-description {
+            color: #222222;
+            font-size: 0.9em;
+            margin-bottom: 12px;
             line-height: 1.5;
         }
         
@@ -387,19 +451,12 @@
             margin-bottom: 4px;
         }
         
-        /* Book Section */
-        .book-item {
-            margin: 20px 0;
+        .publication-featured {
             padding: 12px 14px;
             background: #ffffff;
-            border-radius: 8px;
+            border: 1px solid #e5e5e5;
             border-left: 3px solid #c41e3a;
-        }
-        
-        .book-content h3 {
-            margin-top: 0;
-            margin-bottom: 6px;
-            font-size: 1.1em;
+            border-radius: 8px;
         }
         
         /* Video Embeds */
@@ -556,6 +613,25 @@
             
             .video-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .project-banner-content {
+                padding: 14px 16px;
+            }
+            
+            .project-banner-figure {
+                padding: 12px 14px 10px;
+            }
+            
+            /* Wide technical diagram stays legible via horizontal panning
+               rather than shrinking to an unreadable size on narrow screens. */
+            .project-banner-figure img {
+                min-width: 560px;
+            }
+            
+            .project-banner-scroll {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
             }
             
         }
@@ -715,7 +791,7 @@
                     <ul>
                         <li>Devised a loss-landscape distillation compression method (SPRKD) yielding 2-24% higher accuracy at roughly 10% of conventional training time in tested configurations.</li>
                         <li>Computed high-descent-potential saddle points in the teacher optimization landscape via Hessian approximation and spectral analysis for rapid curvature-tracking student convergence.</li>
-                        <li>Published as <a href="https://arxiv.org/abs/2607.23346" target="_blank">arXiv:2607.23346</a>; project page at <a href="http://tinyurl.com/AdityaSPRKD" target="_blank">SPRKD</a>.</li>
+                        <li>Published as <a href="https://arxiv.org/abs/2607.23346" target="_blank">arXiv:2607.23346</a>; <a href="https://isef.net/project/robo041-sprkd-effective-knowledge-distillation" target="_blank">ISEF project page</a>.</li>
                     </ul>
                 </div>
             </div>
@@ -802,29 +878,35 @@
             
             <div class="projects-container">
                 <div class="projects-grid">
+                    <!-- SPRKD - Featured Banner -->
+                    <div class="project-banner">
+                        <div class="project-banner-content">
+                            <div class="project-banner-eyebrow">Featured</div>
+                            <div class="project-banner-title">SPRKD (Saddle Point Recruitment for Knowledge Distillation)</div>
+                            <div class="project-banner-meta">2022-2026 | arXiv:2607.23346</div>
+                            <div class="project-banner-description">Reframes knowledge distillation from teacher replication to curvature transfer, using teacher saddle regions as proxies for loss-landscape structure. Distilling from a weak 2-epoch teacher, SPRKD reaches 94.80% validation accuracy on malaria blood smear classification, outperforming Response KD by 24.70 points (70.10%) and matching scratch-trained controls to statistical equivalence. Hessian spectral analysis shows convergence to substantially flatter minima (trace 33.39 vs. 408.27 for RKD). Recognized by the NSA, ISEF, and WAICY.</div>
+                            <div class="project-card-links">
+                                <a href="https://arxiv.org/abs/2607.23346" target="_blank">arXiv</a> | 
+                                <a href="https://drive.google.com/file/d/1WzIgYpHcdyfayhP3GcqTrqPTt0Br43qf/view?usp=share_link" target="_blank">Presentation</a> | 
+                                <a href="https://isef.net/project/robo041-sprkd-effective-knowledge-distillation" target="_blank">Project</a>
+                            </div>
+                        </div>
+                        <figure class="project-banner-figure">
+                            <div class="project-banner-scroll">
+                                <img src="assets/img/sprkd-pipeline.png" alt="SPRKD three-phase pipeline: teacher ensemble training with saddle tracking, saddle region approximation and distillation, and SPRKD student training.">
+                            </div>
+                            <figcaption>The three-phase SPRKD pipeline: (1) teacher ensemble training with Hessian-based saddle tracking, (2) saddle region approximation and transfer by injection, (3) student training via decaying transformation matrices and negative Hessian eigensteps.</figcaption>
+                        </figure>
+                    </div>
+
                     <!-- HFOLD Project - Full Width -->
-                    <div class="project-titans">
-                        <div class="project-titans-title">HFOLD: Dynamic Hidden State Heap Folding for Efficient Long-Context Attention</div>
-                        <div class="project-titans-description">
+                    <div class="project-fullwidth">
+                        <div class="project-fullwidth-title">HFOLD: Dynamic Hidden State Heap Folding for Efficient Long-Context Attention</div>
+                        <div class="project-fullwidth-description">
                             Introduced an inference-time memory mechanism that augments sliding-window attention with a bounded heap of high-relevance historical states. At each timestep, HFOLD retrieves top-ranked hidden states, reinserts transformed high-attention tokens, and applies a relevance-conditioned FOLD update (via GEM + RSM modules) to preserve information from evicted states. On Pythia 14M/31M evaluation, HFOLD recovered substantial long-range quality lost by plain sliding-window attention in language modeling (perplexity reduction from 225.1 to 91.7 in the full-attention-finetuned setting), while maintaining linear-time asymptotic behavior. The main current limitation is systems-level throughput overhead from non-fused heap operations.
                         </div>
                         <div class="project-card-links">
                             <a href="https://drive.google.com/file/d/1XmTStuIUuc82CmCB6kFsNkOfhodPiYpv/view?usp=drive_link" target="_blank">Paper</a>
-                        </div>
-                    </div>
-
-                    <!-- SPRKD -->
-                    <div class="project-card">
-                        <img src="assets/img/PORTFOLIO ITEMS/PUBLICATIONS/PROJECT PRESENTATION (TEAM CANADA-ISEF 2023)..png" alt="SPRKD" class="project-card-image">
-                        <div class="project-card-content">
-                            <div class="project-card-title">SPRKD (Saddle Point Recruitment for Knowledge Distillation)</div>
-                            <div class="project-card-date">2022-2026 | arXiv:2607.23346</div>
-                            <div class="project-card-description">Reframes knowledge distillation from teacher replication to curvature transfer, using teacher saddle regions as proxies for loss-landscape structure. Outperforms RKD by 24.70 points on malaria classification (94.80% vs. 70.10%). Recognized by the NSA, ISEF, and WAICY.</div>
-                            <div class="project-card-links">
-                                <a href="https://arxiv.org/abs/2607.23346" target="_blank">arXiv</a> | 
-                                <a href="http://tinyurl.com/AdityaSPRKD" target="_blank">Project</a> | 
-                                <a href="https://drive.google.com/file/d/1WzIgYpHcdyfayhP3GcqTrqPTt0Br43qf/view?usp=share_link" target="_blank">Presentation</a>
-                            </div>
                         </div>
                     </div>
 
@@ -938,13 +1020,13 @@
             <h2>Publications & Articles</h2>
             <p class="section-intro">Full list available on <a href="https://scholar.google.com/citations?user=WMecWXkAAAAJ&amp;hl=en" target="_blank">Google Scholar</a>.</p>
 
-            <div class="publication-item">
+            <div class="publication-item publication-featured">
                 <div class="publication-title">SPRKD: Effective Knowledge Distillation for Deep Neural Networks via Saddle Region Approximation</div>
                 <div class="publication-meta">Aditya Dewan, Arjun Yogeswaran, Benjamin Fedoruk. arXiv preprint arXiv:2607.23346, 2026.</div>
                 <div class="description">
                     <a href="https://arxiv.org/abs/2607.23346" target="_blank">arXiv</a> | 
                     <a href="https://arxiv.org/pdf/2607.23346" target="_blank">PDF</a> | 
-                    <a href="http://tinyurl.com/AdityaSPRKD" target="_blank">Project</a>
+                    <a href="https://isef.net/project/robo041-sprkd-effective-knowledge-distillation" target="_blank">Project</a>
                 </div>
             </div>
 
@@ -956,10 +1038,10 @@
                 </div>
             </div>
 
-            <div class="book-item">
-                <h3>AI Education Textbook: Education for the Next Generation: Nurturing Effective Learning</h3>
-                <p style="margin-bottom: 8px;">Published on Amazon; peaked at #4 in Neural Networks.</p>
-                <div class="project-links">
+            <div class="publication-item">
+                <div class="publication-title">Education for the Next Generation: Nurturing Effective Learning</div>
+                <div class="publication-meta">AI education textbook. Published on Amazon; peaked at #4 in Neural Networks.</div>
+                <div class="description">
                     <a href="https://www.amazon.com/Education-Next-Generation-Nurturing-Effective-ebook/dp/B0D8JHX3GS" target="_blank">Amazon</a>
                 </div>
             </div>
