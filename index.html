@@ -690,8 +690,8 @@
                 </div>
                 <div class="location">Pittsburgh, PA</div>
                 <div class="description">
-                    <p><strong>Clubs:</strong> Quant Club (Goldman Sachs Quantathon: 100%), CMU Racing (built CUDA SVMs with 2x speedup for GPU midline generation).</p>
-                    <p><strong>Systems Work:</strong> Built Malloc (dynamic memory allocator) and a fully concurrent, thread-safe file system in C from scratch.</p>
+                    <p><strong>Clubs:</strong> Quant Club (Goldman Sachs Quantathon: 100%), CMU Racing (built CUDA SVMs for 2x speedup). ACT 36.</p>
+                    <p><strong>Systems Work:</strong> Built Malloc (heap allocator), a Blackwell-optimized GEMM kernel, and a concurrent thread-safe file system from scratch.</p>
                 </div>
             </div>
 
@@ -729,17 +729,17 @@
             <div class="experience-item">
                 <div class="experience-header">
                     <div>
-                        <span class="title">Software Development Engineer Intern</span>
-                        <span class="organization">Amazon Web Services (AWS), Amazon DCV Team</span>
+                        <span class="title">Software Development Engineer Intern (Return offer received)</span>
+                        <span class="organization">Amazon Web Services (AWS), Display Protocols Team</span>
                     </div>
                     <span class="date">May 2026 – Aug. 2026</span>
                 </div>
                 <div class="location">Seattle, WA</div>
                 <div class="description">
                     <ul>
-                        <li>Designed a Poisson-process packet-loss probe scheduler with provable guarantees, modeling inter-arrivals and anomaly recurrences to achieve at least 95% detection within seven recurrences; bounded heavy-tail wait behavior via Chernoff-bound analysis and Lambert W-based calibration.</li>
-                        <li>Built a real-time C#/.NET diagnostics client (STA/MTA multithreading, async probes, rotating ndjson sessions) streaming 51 live client metrics; embedded statistical suite (Gaussian fitting, pairwise correlation heatmaps, scatter/histograms, session replay) saves roughly 598 cumulative hours of production troubleshooting time for clients including Ferrari, Intuit, Netflix, and Volkswagen.</li>
-                        <li>Architected an end-to-end time-series ML pipeline that injects CPU/GPU/RTT faults, dynamically labels causal signals, and fine-tunes a Tiny Time Mixer with custom anomaly-detection and forecasting heads; implemented root-cause routing for targeted remediation.</li>
+                        <li>Designed a Poisson-process packet-loss probe scheduler with provable guarantees: modeled exponential probe inter-arrivals and cast repeated-anomaly detection as a geometric process, setting the probe rate for at least 95% detection within 7 recurrences; truncated the heavy exponential tail via a Chernoff bound solved with the Lambert W function, provably preserving 95% of the sampling mass while eliminating unbounded waits.</li>
+                        <li>Built a real-time C#/.NET diagnostics client (STA/MTA multithreading, async probes, rotating ndjson sessions) streaming 51 live client metrics; embedded statistical suite (Gaussian fitting, pairwise correlation heatmaps, scatter/histograms, session replay) saves roughly 598 cumulative hours of production troubleshooting time; integrated and shipped metric samplers into Amazon WorkSpaces (now in production) for clients including Ferrari, Intuit, Netflix, and Volkswagen.</li>
+                        <li>Architected an end-to-end anomaly detection and time-series forecasting ML pipeline: built synthetic data generation and validation infra injecting CPU/GPU/RTT anomalies, fine-tuned a Tiny Time Mixer with anomaly-detection and forecasting heads plus stream-pooling; added root-cause diagnostics and troubleshooting suggestions via a routing layer; entirely on-device inference and training with near-zero CPU client cost, augmented via hysteresis and debounce.</li>
                     </ul>
                 </div>
             </div>
@@ -747,16 +747,15 @@
             <div class="experience-item">
                 <div class="experience-header">
                     <div>
-                        <span class="title">Machine Learning Summer Research Intern</span>
-                        <span class="organization">Goomba Lab (Mamba Architecture), CMU</span>
+                        <span class="title">Machine Learning Research Intern</span>
+                        <span class="organization">Goomba Lab (Inventors of Mamba Architecture), Carnegie Mellon</span>
                     </div>
                     <span class="date">May 2025 – Aug. 2025</span>
                 </div>
                 <div class="location">Pittsburgh, PA</div>
                 <div class="description">
                     <ul>
-                        <li>Implemented a novel skip-connection-based Mamba model to mitigate multi-head-attention-related retrieval decline in SSM architectures for linear-time LLM settings.</li>
-                        <li>Analyzed State Space Models and Mamba-2 gather-and-aggregate bottlenecks on MMLU retrieval benchmarks, including embedding perturbation/projection behavior.</li>
+                        <li>Implemented a novel skip-connection Mamba model eliminating MHA-based retrieval degradation in SSMs; diagnosed Mamba-2 gather-aggregate bottlenecks on MMLU via embedding perturbation and eigenspace projection analysis, enabling efficient linear-time LLMs.</li>
                     </ul>
                 </div>
             </div>
@@ -765,15 +764,15 @@
                 <div class="experience-header">
                     <div>
                         <span class="title">Machine Learning Research Intern</span>
-                        <span class="organization">CMU, Dr. David Touretzky</span>
+                        <span class="organization">School of Computer Science, Carnegie Mellon (Dr. David Touretzky)</span>
                     </div>
                     <span class="date">Jul. 2023 – Aug. 2024</span>
                 </div>
                 <div class="location">Pittsburgh, PA</div>
                 <div class="description">
                     <ul>
-                        <li>Engineered and deployed a React web application for simulating and visualizing textual Markov Chain models for 900+ professionals; used in a Concord University study (<a href="https://www.cs.cmu.edu/~dst/MarkovChainDemo" target="_blank">demo</a>).</li>
-                        <li>Built efficient graph generation and probabilistic next-word computation pipelines for bigram, trigram, and tetragram models with dynamic rendering/caching for low latency on large corpora.</li>
+                        <li>Built a React web app simulating textual Markov Chain models for 900+ professionals worldwide; co-credited creator, cited in multiple ACM/CHI publications on AI literacy education (<a href="https://www.cs.cmu.edu/~dst/MarkovChainDemo" target="_blank">demo</a>).</li>
+                        <li>Automated graph generation and n-gram estimation over Wikipedia-scale corpora via dynamic rendering and caching.</li>
                     </ul>
                 </div>
             </div>
@@ -781,7 +780,7 @@
             <div class="experience-item">
                 <div class="experience-header">
                     <div>
-                        <span class="title">Award-winning Neural Network Compression Algorithm</span>
+                        <span class="title">Award-Winning Neural Network Compression Algorithm (SPRKD)</span>
                         <span class="organization">Regeneron ISEF</span>
                     </div>
                     <span class="date">Aug. 2022 – Aug. 2024</span>
@@ -789,8 +788,8 @@
                 <div class="location">Dallas, TX</div>
                 <div class="description">
                     <ul>
-                        <li>Devised a loss-landscape distillation compression method (SPRKD) yielding 2-24% higher accuracy at roughly 10% of conventional training time in tested configurations.</li>
-                        <li>Computed high-descent-potential saddle points in the teacher optimization landscape via Hessian approximation and spectral analysis for rapid curvature-tracking student convergence.</li>
+                        <li>Devised a novel knowledge distillation algorithm at 16 achieving 94.8% accuracy on a 6,430-parameter malaria-classification CNN, beating standard distillation by 24.7 points (p = 6.3e-87); also delivered 2-24% accuracy gains in as little as 10% of training time across MNIST, CIFAR-100, and TinyImageNet.</li>
+                        <li>Reframed distillation from output-replication to using weak-teacher ensembles as curvature/domain proxies via Hessian eigenvalue spectral density, aggregated into an Approximated Saddle Region and injected into the student for re-exploration of low-loss saddle regions. PyTorch, PyHessian, NumPy. Awarded by NSA, ISEF, WAICY.</li>
                         <li>Published as <a href="https://arxiv.org/abs/2607.23346" target="_blank">arXiv:2607.23346</a>; <a href="https://isef.net/project/robo041-sprkd-effective-knowledge-distillation" target="_blank">ISEF project page</a>.</li>
                     </ul>
                 </div>
@@ -800,15 +799,14 @@
                 <div class="experience-header">
                     <div>
                         <span class="title">Junior Machine Learning Engineer</span>
-                        <span class="organization">The Rounds ($40M healthcare startup)</span>
+                        <span class="organization">The Rounds (Boondoc Technologies, $40M healthcare startup)</span>
                     </div>
                     <span class="date">Jul. 2023 – Jan. 2024</span>
                 </div>
                 <div class="location">Toronto, CA</div>
                 <div class="description">
                     <ul>
-                        <li>Engineered the company’s first ML backend infrastructure for high server volume and minimum latency using prompt chunking, custom drug vector embeddings, and safety guardrails.</li>
-                        <li>Developed an LLM-based drug monograph summarization API and web application for real-time clinical patient diagnosis workflows.</li>
+                        <li>Architected the company's ML infrastructure (prompt-chunking, novel drug-vector embeddings for medical-grade outputs); deployed an EC2 few-shot LLM drug-monograph summarization API and React app for in-clinic patient diagnosis. Python, Flask, ChromaDB, LangChain.</li>
                     </ul>
                 </div>
             </div>
@@ -816,16 +814,15 @@
             <div class="experience-item">
                 <div class="experience-header">
                     <div>
-                        <span class="title">Machine Learning Specialist</span>
-                        <span class="organization">Actionable.co (1000+ orgs)</span>
+                        <span class="title">Machine Learning Specialist (Promoted from Machine Learning Intern)</span>
+                        <span class="organization">Actionable.co (used by 1000+ organizations)</span>
                     </div>
-                    <span class="date">Jul. 2021 – May. 2023</span>
+                    <span class="date">Jul. 2021 – May 2023</span>
                 </div>
                 <div class="location">Toronto, CA</div>
                 <div class="description">
                     <ul>
-                        <li>Led a team of three to architect and deploy a recommendation engine API serving 45,000+ clients in prototyping, targeting maximal average rating-change uplift.</li>
-                        <li>Built a hybrid GAN/Gradient Boosted Tree/MLP model pipeline and production deployment stack with Python, PyTorch, TensorFlow, XGBoost, SQL, and Flask.</li>
+                        <li>Led a team of 3 shipping a recommendation-engine API to 45K clients computing principal levers of average-rating-change maximization for firm training programs; engineered a hybrid GAN / Gradient-Boosted Tree / MLP ensemble for production.</li>
                     </ul>
                 </div>
             </div>
@@ -837,22 +834,22 @@
             <p class="section-intro">Selected recognitions across quantitative trading, machine learning research, and international science competitions.</p>
             <div class="award-item">
                 <div class="award-title">Optiver Market Making Competition</div>
-                <div class="award-description">1st Place in Quantitative Trading; first freshman team to ever win.</div>
+                <div class="award-description">1st Place, Quantitative Trading Competition; first freshman team to ever win.</div>
             </div>
 
             <div class="award-item">
                 <div class="award-title">Hudson River Trading, Best Use of Quantitative Data Award</div>
-                <div class="award-description">Awarded for a machine-learning insurance-pricing platform.</div>
+                <div class="award-description">Awarded for InsurAI, an ML insurance-pricing prediction platform.</div>
             </div>
 
             <div class="award-item">
                 <div class="award-title">U.S. National Security Agency (NSA)</div>
-                <div class="award-description">Second Award in Cybersecurity/Mathematics at Regeneron ISEF (1600+ finalists) for neural network compression research.</div>
+                <div class="award-description">Second Award, Cybersecurity / Mathematics at Regeneron ISEF (1600+ finalists).</div>
             </div>
 
             <div class="award-item">
                 <div class="award-title">Regeneron ISEF</div>
-                <div class="award-description">One of 8 selected to represent Canada; Fourth Award in Robotics and Intelligent Machines.</div>
+                <div class="award-description">1 of 8 chosen to represent Canada; Fourth Award, Robotics and Intelligent Machines.</div>
             </div>
 
             <div class="award-item">
@@ -862,12 +859,12 @@
 
             <div class="award-item">
                 <div class="award-title">TEDx Speaker, Innovire Speaker</div>
-                <div class="award-description">Mathematical Foundations of ML and AI research talks (<a href="https://linktr.ee/AdiCMU" target="_blank">linktr.ee/AdiCMU</a>).</div>
+                <div class="award-description">Mathematical Foundations of ML, AI Research (<a href="https://linktr.ee/AdiCMU" target="_blank">linktr.ee/AdiCMU</a>).</div>
             </div>
 
             <div class="award-item">
                 <div class="award-title">Morgan Stanley / Quantbot Trading Competition</div>
-                <div class="award-description">Highest Sharpe ratio across all submissions (6th overall).</div>
+                <div class="award-description">Highest Sharpe ratio of all submissions (6th place overall).</div>
             </div>
         </div>
 
@@ -1040,7 +1037,7 @@
 
             <div class="publication-item">
                 <div class="publication-title">Markov Chain Demo</div>
-                <div class="publication-meta">Aditya Dewan, David S. Touretzky. Carnegie Mellon University, 2023.</div>
+                <div class="publication-meta">Aditya Dewan, David S. Touretzky. Carnegie Mellon University, 2023. Co-credited creator; cited in multiple ACM/CHI publications on AI literacy education.</div>
                 <div class="description">
                     <a href="https://www.cs.cmu.edu/~dst/MarkovChainDemo" target="_blank">Demo</a>
                 </div>
