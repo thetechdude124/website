@@ -674,7 +674,7 @@
         <!-- About -->
         <div class="section" id="about">
             <h2>About</h2>
-            <p>Quantitative finance and machine learning researcher focused on statistical modeling of financial markets, efficient transformer architectures, and loss-landscape-based knowledge distillation. Aspiring deep learning researcher working towards mastery in the field.</p>
+            <p>Junior at Carnegie Mellon studying computer science, math, and machine learning. Led the first freshman team to win Optiver's market making competition at CMU. Spent summer 2026 at AWS building a probabilistic packet-loss probe scheduler and diagnostics tooling for Amazon DCV and WorkSpaces. Research on state space models (Goomba Lab) and loss-landscape-based knowledge distillation (SPRKD, arXiv:2607.23346).</p>
         </div>
 
         <!-- Education -->
@@ -690,8 +690,9 @@
                 </div>
                 <div class="location">Pittsburgh, PA</div>
                 <div class="description">
-                    <p><strong>Clubs:</strong> Quant Club (Goldman Sachs Quantathon: 100%), CMU Racing (built CUDA SVMs for 2x speedup). ACT 36.</p>
-                    <p><strong>Systems Work:</strong> Built Malloc (heap allocator), a Blackwell-optimized GEMM kernel, and a concurrent thread-safe file system from scratch.</p>
+                    <p><strong>Dean's List, High Honors</strong> (Fall 2025). ACT 36.</p>
+                    <p><strong>Clubs:</strong> Quant Club (Goldman Sachs Quantathon), CMU Racing (SVM midline generation rewritten on CUDA in PyTorch, 2x speedup).</p>
+                    <p><strong>Systems Work:</strong> malloc heap allocator and concurrent thread-safe file system in C; Blackwell-optimized CUDA GEMM kernel.</p>
                 </div>
             </div>
 
@@ -712,11 +713,11 @@
             <div class="skills">
                 <div class="skill-category">
                     <strong>Machine Learning & Systems:</strong>
-                    10-723 Generative AI (Ph.D.), 11-785 Deep Learning (Ph.D.), 10-701 Machine Learning (Ph.D.), 15-442 Machine Learning Systems (GPU + Kernel Optimization), 15-210 Parallel Computing + Algorithms, 15-213 Introduction to Computer Systems, 15-122 Data Structures and Algorithms, 15-150 Functional Programming
+                    10-701 Machine Learning (Ph.D.), 10-723 Generative AI, 11-785 Deep Learning, 15-442 Machine Learning Systems (GPU + Kernel Optimization), 15-440 Distributed Systems, 15-210 Parallel and Sequential Data Structures and Algorithms, 15-213 Introduction to Computer Systems, 15-122 Imperative Computation, 15-150 Functional Programming
                 </div>
                 <div class="skill-category">
                     <strong>Math, Theory & Quantitative:</strong>
-                    15-259 Probability and Computing, 21-270 Mathematical Finance, 15-251 Theoretical Computer Science/Discrete Math, 15-195 Competitive Programming, 21-241 Matrices and Linear Algebra, 21-295 Putnam Seminar
+                    15-259 Probability and Computing, 21-301 Combinatorics, 21-270 Mathematical Finance, 15-251 Great Ideas in Theoretical Computer Science, 15-195 Competitive Programming, 21-241 Matrices and Linear Transformations, 21-295 Putnam Seminar
                 </div>
             </div>
         </div>
@@ -724,7 +725,7 @@
         <!-- Experience -->
         <div class="section" id="experience">
             <h2>Research & Experience</h2>
-            <p class="section-intro">Research-heavy ML work and production systems engineering across long-context modeling, diagnostics, and high-reliability infrastructure.</p>
+            <p class="section-intro">Probability and ML work that shipped, plus research on sequence models and distillation.</p>
 
             <div class="experience-item">
                 <div class="experience-header">
@@ -737,9 +738,9 @@
                 <div class="location">Seattle, WA</div>
                 <div class="description">
                     <ul>
-                        <li>Designed a Poisson-process packet-loss probe scheduler with provable guarantees: modeled exponential probe inter-arrivals and cast repeated-anomaly detection as a geometric process, setting the probe rate for at least 95% detection within 7 recurrences; truncated the heavy exponential tail via a Chernoff bound solved with the Lambert W function, provably preserving 95% of the sampling mass while eliminating unbounded waits.</li>
-                        <li>Built a real-time C#/.NET diagnostics client (STA/MTA multithreading, async probes, rotating ndjson sessions) streaming 51 live client metrics; embedded statistical suite (Gaussian fitting, pairwise correlation heatmaps, scatter/histograms, session replay) saves roughly 598 cumulative hours of production troubleshooting time; integrated and shipped metric samplers into Amazon WorkSpaces (now in production) for clients including Ferrari, Intuit, Netflix, and Volkswagen.</li>
-                        <li>Architected an end-to-end anomaly detection and time-series forecasting ML pipeline: built synthetic data generation and validation infra injecting CPU/GPU/RTT anomalies, fine-tuned a Tiny Time Mixer with anomaly-detection and forecasting heads plus stream-pooling; added root-cause diagnostics and troubleshooting suggestions via a routing layer; entirely on-device inference and training with near-zero CPU client cost, augmented via hysteresis and debounce.</li>
+                        <li>Designed a Poisson-process packet-loss probe scheduler: treated each anomaly recurrence as a Bernoulli trial (recurrences to first detection are geometric) and set the probe rate for at least 95% detection within 7 recurrences; capped the inter-probe gap at a Chernoff cutoff (closed form via the Lambert W function) that clips at most 5% of gaps.</li>
+                        <li>Built a C#/.NET diagnostics client (STA/MTA multithreading, async probes, rotating ndjson sessions) streaming 51 client metrics, with correlation heatmaps, histograms, and session replay; estimated to save at least 598 hours/year of production troubleshooting (one hour per historical escalation ticket). Its metric samplers are in production in Amazon WorkSpaces for clients including Ferrari, Intuit, Netflix, and Volkswagen.</li>
+                        <li>Built an end-to-end anomaly detection and time-series forecasting pipeline: synthetic data generation and validation infra injecting CPU/GPU/RTT anomalies; fine-tuned a Tiny Time Mixer with anomaly-detection and forecasting heads and stream pooling; root-cause diagnostics via a routing layer; on-device inference and training with the model under 3 MB and under 2% client CPU including the app, with hysteresis and debounce.</li>
                     </ul>
                 </div>
             </div>
@@ -748,14 +749,15 @@
                 <div class="experience-header">
                     <div>
                         <span class="title">Machine Learning Research Intern</span>
-                        <span class="organization">Goomba Lab (Inventors of Mamba Architecture), Carnegie Mellon</span>
+                        <span class="organization">Goomba Lab (Prof. Albert Gu), Carnegie Mellon</span>
                     </div>
                     <span class="date">May 2025 – Aug. 2025</span>
                 </div>
                 <div class="location">Pittsburgh, PA</div>
                 <div class="description">
                     <ul>
-                        <li>Implemented a novel skip-connection Mamba model eliminating MHA-based retrieval degradation in SSMs; diagnosed Mamba-2 gather-aggregate bottlenecks on MMLU via embedding perturbation and eigenspace projection analysis, enabling efficient linear-time LLMs.</li>
+                        <li>Implemented a skip-connection Mamba model for the drop in retrieval when multi-head attention is replaced by SSMs, toward linear-time LLMs.</li>
+                        <li>Diagnosed Mamba-2 gather-and-aggregate bottlenecks on MMLU with embedding perturbation and eigenspace projections; ran hybrid (Llamba) head-replacement experiments.</li>
                     </ul>
                 </div>
             </div>
@@ -788,8 +790,8 @@
                 <div class="location">Dallas, TX</div>
                 <div class="description">
                     <ul>
-                        <li>Devised a novel knowledge distillation algorithm at 16 achieving 94.8% accuracy on a 6,430-parameter malaria-classification CNN, beating standard distillation by 24.7 points (p = 6.3e-87); also delivered 2-24% accuracy gains in as little as 10% of training time across MNIST, CIFAR-100, and TinyImageNet.</li>
-                        <li>Reframed distillation from output-replication to using weak-teacher ensembles as curvature/domain proxies via Hessian eigenvalue spectral density, aggregated into an Approximated Saddle Region and injected into the student for re-exploration of low-loss saddle regions. PyTorch, PyHessian, NumPy. Awarded by NSA, ISEF, WAICY.</li>
+                        <li>Knowledge distillation algorithm started at 16. Reaches 94.8% accuracy on a 6,430-parameter malaria CNN distilled from a 70% weak teacher: 24.7 points over response KD and statistically equivalent to the from-scratch student (94.5%); up to 8 points over scratch controls on CIFAR-100 and MNIST at a matched epoch-10 checkpoint; 5 trials per experiment.</li>
+                        <li>Uses weak-teacher ensembles as curvature proxies via Hessian eigenvalue spectral density (top eigenvalues by power iteration), aggregated into an Approximated Saddle Region and injected into the student; also ResNet-101 to ResNet-18 on TinyImageNet. PyTorch, PyHessian. Awarded by NSA, ISEF, WAICY.</li>
                         <li>Published as <a href="https://arxiv.org/abs/2607.23346" target="_blank">arXiv:2607.23346</a>; <a href="https://isef.net/project/robo041-sprkd-effective-knowledge-distillation" target="_blank">ISEF project page</a>.</li>
                     </ul>
                 </div>
@@ -806,7 +808,7 @@
                 <div class="location">Toronto, CA</div>
                 <div class="description">
                     <ul>
-                        <li>Architected the company's ML infrastructure (prompt-chunking, novel drug-vector embeddings for medical-grade outputs); deployed an EC2 few-shot LLM drug-monograph summarization API and React app for in-clinic patient diagnosis. Python, Flask, ChromaDB, LangChain.</li>
+                        <li>Built the company's first ML infrastructure (prompt chunking, drug-vector embeddings for medical-grade outputs); deployed an EC2 few-shot LLM drug-monograph summarization API and React app for in-clinic patient diagnosis. Python, Flask, ChromaDB, LangChain.</li>
                     </ul>
                 </div>
             </div>
@@ -834,12 +836,12 @@
             <p class="section-intro">Selected recognitions across quantitative trading, machine learning research, and international science competitions.</p>
             <div class="award-item">
                 <div class="award-title">Optiver Market Making Competition</div>
-                <div class="award-description">1st Place, Quantitative Trading Competition; first freshman team to ever win.</div>
+                <div class="award-description">1st Place (CMU, March 2025). Led the first freshman team to win, beating master's teams. Edge: whenever our interval on a price was tight and high-confidence, hit the bids above it and lifted the offers below it in the opening minutes, before other teams converged.</div>
             </div>
 
             <div class="award-item">
-                <div class="award-title">Hudson River Trading, Best Use of Quantitative Data Award</div>
-                <div class="award-description">Awarded for InsurAI, an ML insurance-pricing prediction platform.</div>
+                <div class="award-title">Hudson River Trading track, HackCMU 2024</div>
+                <div class="award-description">1st in track (Best Use of Quantitative Data) for InsurAI, a gradient-boosted insurance-pricing model.</div>
             </div>
 
             <div class="award-item">
@@ -853,8 +855,8 @@
             </div>
 
             <div class="award-item">
-                <div class="award-title">Google DeepMind Offer</div>
-                <div class="award-description">Selected as a research contractor as a sophomore (declined due to start date conflict).</div>
+                <div class="award-title">Google DeepMind, incubation team</div>
+                <div class="award-description">Research contractor offer as a sophomore (Spring 2026); declined due to a start-date conflict.</div>
             </div>
 
             <div class="award-item">
@@ -863,8 +865,8 @@
             </div>
 
             <div class="award-item">
-                <div class="award-title">Morgan Stanley / Quantbot Trading Competition</div>
-                <div class="award-description">Highest Sharpe ratio of all submissions (6th place overall).</div>
+                <div class="award-title">CMU MSCF Datathon (sponsored by Morgan Stanley and Quantbot), March 2025</div>
+                <div class="award-description">6th place overall; highest Sharpe ratio of all submissions. Built the team's stock-return predictor, mostly feature engineering.</div>
             </div>
         </div>
 
